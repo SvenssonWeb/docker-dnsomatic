@@ -1,4 +1,4 @@
-FROM codeworksio/python:3.6-20180212
+FROM python:3.11-alpine
 
 ENV DNSOMATIC_USERNAME="username" \
     DNSOMATIC_PASSWORD="password" \
@@ -6,9 +6,7 @@ ENV DNSOMATIC_USERNAME="username" \
     DNSOMATIC_INTERVAL="60" \
     DNSOMATIC_TRIES="0"
 
-RUN set -ex; \
-    \
-    pip install \
+RUN pip install \
         pytz \
         requests
 
